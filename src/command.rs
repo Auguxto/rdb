@@ -13,7 +13,7 @@ pub fn parse_command_args(command: &str) -> Vec<&str> {
 }
 
 pub fn parse_command_type(command: &str) -> Command {
-    match command {
+    match command.to_lowercase().as_str() {
         "insert" => Command::Insert,
         "delete" => Command::Delete,
         "update" => Command::Update,
